@@ -248,6 +248,9 @@ function mymenus_block_edit($options)
             $form .= $formThemeSkinSelect->render();
             $form .= "\n&nbsp;&nbsp;<i>" . _MB_MYMENUS_SELECT_SKIN_FROM_THEME_DSC . "</i>\n<br /><br />\n";
         }
+    } else {
+        $formThemeSkinSelect = new XoopsFormHidden ("options[5]", $options[5]);
+        $form .= $formThemeSkinSelect->render();
     }
 
     return $form;
